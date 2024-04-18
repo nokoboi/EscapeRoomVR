@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Barril
   - Escalar
+  - Pulsador
   layers:
   - Default
   - TransparentFX
