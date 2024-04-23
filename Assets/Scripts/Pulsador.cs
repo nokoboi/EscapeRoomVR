@@ -6,6 +6,7 @@ public class Pulsador : MonoBehaviour
 {
     private int contador = 12;
     private GameObject[] barriles;
+    public AudioSource audio;
 
     private void Start()
     {
@@ -30,7 +31,8 @@ public class Pulsador : MonoBehaviour
         if (other.gameObject.tag == "Pulsador")
         {
             Debug.Log("Colision con barril");
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, 0.5f);
+            audio.Play();
             contador--;
         }
     }

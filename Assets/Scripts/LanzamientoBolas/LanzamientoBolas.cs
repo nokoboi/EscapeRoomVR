@@ -8,13 +8,15 @@ public class LanzamientoBolas : MonoBehaviour
     public GameObject[] balls;
     public GameObject repisa, pared;
     public static int contador = 3;
+    public AudioSource audio;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Barril"))
         {
             contador--;
-            Destroy(collision.gameObject);
+            audio.Play();
+            Destroy(collision.gameObject,0.5f);
 
             Debug.Log(contador);
 
