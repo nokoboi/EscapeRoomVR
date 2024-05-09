@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.AnimatedValues;
 using UnityEngine;
 
 public class LanzamientoBolas : MonoBehaviour
 {
     public GameObject[] balls;
     public GameObject repisa, pared;
-    public static int contador = 4;
+    public static int contador = 3;
     public AudioSource audio;
 
     private void OnCollisionEnter(Collision collision)
